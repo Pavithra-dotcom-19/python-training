@@ -1,13 +1,13 @@
-x=int (input())
-for i in range (x):
-    for j in range(x-i-1):
-        print(" ",end="")
-    for j in range(i+1):
-        print("*",end=" ")
-    print()
-for i in range (x-2,-1,-1):
-    for j in range(x-i-1):
-        print(" ",end="")
-    for j in range(i+1):
-        print("*",end=" ")
-    print()
+def leftover(a,b):
+    left=" "
+    remove=set(b)
+    for ch in a:
+     if ch not in remove:
+       left+=ch
+     if left:
+         print(left)
+    else:
+        print("empty")
+a="abcdef"
+b="bde"
+leftover(a,b)
